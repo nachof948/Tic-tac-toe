@@ -1,0 +1,41 @@
+.app{
+  background-color: #044d64;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-juego{
+  width: 40rem;
+  height: 36rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.turnos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titulo{
+  color: white;
+  font-size: 4rem;
+}
+.btn-resetear{
+  padding: 0.6rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 700;
+  transition: all 300ms;
+}
+.btn-resetear:hover{
+  background-color: white;
+  color: #044d64;
+}

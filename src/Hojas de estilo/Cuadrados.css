@@ -1,0 +1,16 @@
+.cuadrado{
+    background-color: transparent;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 10rem;
+    margin: 0.2rem;
+    cursor: pointer;
+    color: white;
+    font-size: 5rem;
+}
+.cuadrado.seleccionado{
+    background-color: tomato;
+}
