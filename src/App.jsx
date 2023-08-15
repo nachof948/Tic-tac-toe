@@ -59,7 +59,7 @@ const COMBINACIONES =[
     /* Revisar si hay un ganador */
     const nuevoGanador = jugadorGanador(nuevaTabla)
     if(nuevoGanador) {
-      setGanador(ganador)
+      setGanador(nuevoGanador)
     } else if (chequearFinDelJuego(nuevaTabla)) {
       setGanador(false)
     }
@@ -96,6 +96,13 @@ const COMBINACIONES =[
         <Cuadrado seleccionado={turno === TURNOS.X}>{TURNOS.X}</Cuadrado>
         <Cuadrado seleccionado={turno === TURNOS.O}>{TURNOS.O}</Cuadrado>
       </section>
+      {ganador !== null  && <section className='modal'>
+          <div className='contenedor-modal'>
+            <h2>{ganador === false ? 'Empate': null}</h2>
+            <h2>{ganador && `Ganador: ${ganador}`}</h2>
+            <button className='btn-resetear' onClick={resetearJuego}>Resetear Juego</button>
+          </div>
+        </section>}
     </main>
   )
 }
