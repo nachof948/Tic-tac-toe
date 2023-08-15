@@ -15,3 +15,16 @@
 .cuadrado.seleccionado{
     background-color: tomato;
 }
+/* MEDIA-QUERIES */
+@media (max-width: 650px) {
+    .cuadrado{
+        height: 8rem;
+        width: 8rem;
+    }
+}
+@media (max-width: 490px) {
+    .cuadrado{
+        height: 5.5rem;
+        width: 5.5rem;
+    }
+}
