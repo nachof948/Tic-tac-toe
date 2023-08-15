@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { Cuadrado } from './components/Cuadrados'
+import confetti from 'canvas-confetti'
 
 function App() {
 const TURNOS = {
@@ -59,6 +60,7 @@ const COMBINACIONES =[
     /* Revisar si hay un ganador */
     const nuevoGanador = jugadorGanador(nuevaTabla)
     if(nuevoGanador) {
+      confetti()
       setGanador(nuevoGanador)
     } else if (chequearFinDelJuego(nuevaTabla)) {
       setGanador(false)
