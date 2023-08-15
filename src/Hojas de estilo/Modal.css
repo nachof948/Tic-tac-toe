@@ -1,0 +1,85 @@
+.modal{
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+  }
+  .contenedor-modal{
+    width: 45rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: tomato;
+  }
+  .contenedor-modal h2{
+    font-size: 6rem;
+    color: #044d64;
+    animation: idayvuelta infinite 3s linear;
+  }
+  
+  @keyframes idayvuelta {
+    0%{
+      transform: translateY(0);
+    }
+    25%{
+      transform: translateY(1rem);
+    }
+    50%{
+      transform: translateY(0);
+    }
+    75%{
+      transform: translateY(-1rem);
+    }
+    100%{
+      transform: translateY(-0.05rem);
+    }
+  }
+  
+  /* MEDIA-QUERIES */
+  @media (max-width: 650px) {
+    .contenedor-juego{
+        height: 25rem;
+        width: 30rem;
+    }
+    .contenedor-modal{
+      width: 30rem;
+      height: 25rem;
+    }
+    .contenedor-modal h2{
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 490px) {
+    .contenedor-modal{
+      width: 20rem;
+      height: 15rem;
+      gap: 2rem;
+    }
+    .contenedor-modal h2{
+      font-size: 3rem;
+    }
+    .btn-resetear{
+      padding: 0.4rem 1.2rem;
+    }
+  }
+  @media (max-width: 370px) {
+    .contenedor-modal{
+      width: 19rem;
+      height: 15rem;
+      gap: 2rem;
+    }
+    .contenedor-modal h2{
+      font-size: 3rem;
+    }
+    .btn-resetear{
+      padding: 0.4rem 1.2rem;
+    }
+  }

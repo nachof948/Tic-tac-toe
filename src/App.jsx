@@ -1,23 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import { Cuadrado } from './components/Cuadrados'
+import { Modal } from './components/Modal'
 import confetti from 'canvas-confetti'
-
+import { TURNOS, COMBINACIONES } from './constantes'
 function App() {
-const TURNOS = {
-  X: 'X',
-  O:'O'
-}
-const COMBINACIONES =[
-  [0,1,2],
-  [3,4,5],
-  [6,7,8],
-  [0,3,6],
-  [1,4,7],
-  [2,5,8],
-  [0,4,8],
-  [2,4,6]
-]
 
   /* TURNOS */
   const [turno, setTurno] = useState(TURNOS.X)
@@ -98,13 +85,7 @@ const COMBINACIONES =[
         <Cuadrado seleccionado={turno === TURNOS.X}>{TURNOS.X}</Cuadrado>
         <Cuadrado seleccionado={turno === TURNOS.O}>{TURNOS.O}</Cuadrado>
       </section>
-      {ganador !== null  && <section className='modal'>
-          <div className='contenedor-modal'>
-            <h2>{ganador === false ? 'Empate': null}</h2>
-            <h2>{ganador && `Ganador: ${ganador}`}</h2>
-            <button className='btn-resetear' onClick={resetearJuego}>Resetear Juego</button>
-          </div>
-        </section>}
+       <Modal resetearJuego={resetearJuego} ganador={ganador}/>
     </main>
   )
 }
