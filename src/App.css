@@ -65,6 +65,25 @@ body{
   background-color: tomato;
 }
 .contenedor-modal h2{
-  font-size: 5rem;
+  font-size: 6rem;
   color: #044d64;
+  animation: idayvuelta infinite 3s linear;
+}
+
+@keyframes idayvuelta {
+  0%{
+    transform: translateY(0);
+  }
+  25%{
+    transform: translateY(1rem);
+  }
+  50%{
+    transform: translateY(0);
+  }
+  75%{
+    transform: translateY(-1rem);
+  }
+  100%{
+    transform: translateY(-0.05rem);
+  }
 }
