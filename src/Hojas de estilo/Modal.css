@@ -45,10 +45,6 @@
   
   /* MEDIA-QUERIES */
   @media (max-width: 650px) {
-    .contenedor-juego{
-        height: 25rem;
-        width: 30rem;
-    }
     .contenedor-modal{
       width: 30rem;
       height: 25rem;

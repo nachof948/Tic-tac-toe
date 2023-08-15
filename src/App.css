@@ -95,46 +95,26 @@ body{
       height: 25rem;
       width: 30rem;
   }
-  .contenedor-modal{
-    width: 30rem;
-    height: 25rem;
-  }
-  .contenedor-modal h2{
-    font-size: 4rem;
-  }
 }
 @media (max-width: 490px) {
   .contenedor-juego{
-      height: 20rem;
-      width: 23rem;
-  }
-  .contenedor-modal{
-    width: 20rem;
-    height: 15rem;
-    gap: 2rem;
-  }
-  .contenedor-modal h2{
-    font-size: 3rem;
-  }
+    height: 25rem;
+    width: 27rem;
+}
   .btn-resetear{
     padding: 0.4rem 1.2rem;
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 430px) {
+  .contenedor-juego{
+    height: 22rem;
+    width: 24rem;
+}
+}
+@media (max-width: 390px) {
   .contenedor-juego{
       height: 18rem;
       width: 20rem;
-  }
-  .contenedor-modal{
-    width: 19rem;
-    height: 15rem;
-    gap: 2rem;
-  }
-  .contenedor-modal h2{
-    font-size: 3rem;
-  }
-  .btn-resetear{
-    padding: 0.4rem 1.2rem;
   }
   .titulo{
     font-size: 3rem;

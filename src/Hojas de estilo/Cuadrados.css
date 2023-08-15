@@ -24,7 +24,19 @@
 }
 @media (max-width: 490px) {
     .cuadrado{
-        height: 5.5rem;
-        width: 5.5rem;
+        height: 7rem;
+        width: 7rem;
+    }
+}
+@media (max-width: 430px) {
+    .cuadrado{
+        height: 6rem;
+        width: 6rem;
+    }
+}
+@media (max-width: 390px) {
+    .cuadrado{
+        height: 5rem;
+        width: 5rem;
     }
 }
