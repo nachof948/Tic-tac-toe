@@ -4,13 +4,20 @@ import { Cuadrado } from './components/Cuadrados'
 import { Modal } from './components/Modal'
 import confetti from 'canvas-confetti'
 import { TURNOS, COMBINACIONES } from './constantes'
+
 function App() {
 
   /* TURNOS */
-  const [turno, setTurno] = useState(TURNOS.X)
+  const [turno, setTurno] = useState(()=> {
+    const turnoDeAlmacenamiento = window.localStorage.getItem('turno')
+    return turnoDeAlmacenamiento ? turnoDeAlmacenamiento : TURNOS.X
+  })
 
   /* TABLA DEL JUEGO */
-  const [tabla, setTabla] = useState(Array(9).fill(null))
+  const [tabla, setTabla] = useState(() =>{
+    const tablaDeAlmacenamiento = window.localStorage.getItem('tabla')
+    return tablaDeAlmacenamiento? JSON.parse(tablaDeAlmacenamiento) : Array(9).fill(null)
+  })
   
   const [ganador, setGanador] = useState(null)
   
@@ -44,6 +51,11 @@ function App() {
     const nuevoTurno = (turno === TURNOS.X ? TURNOS.O : TURNOS.X)
     setTurno(nuevoTurno)
 
+    /* Guardar partida */
+    /* Cada vez que se actualiza el juego, ya sea al hacer clic en un cuadrado o al reiniciar el juego, se guarda el estado actual de la tabla y el turno en el localStorage */
+    window.localStorage.setItem('tabla',  JSON.stringify(nuevaTabla))
+    window.localStorage.setItem('turno',  nuevoTurno)
+
     /* Revisar si hay un ganador */
     const nuevoGanador = jugadorGanador(nuevaTabla)
     if(nuevoGanador) {
@@ -60,6 +72,8 @@ function App() {
     setTabla(Array(9).fill(null))
     setTurno(TURNOS.X)
     setGanador(null)
+    window.localStorage.removeItem('tabla')
+    window.localStorage.removeItem('turno')
   }
 
   return (
